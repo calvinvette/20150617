@@ -29,8 +29,8 @@ btnSubmit.onclick = function(evt) {
 
 	var cust = new Customer(); // Our business domain model
 	cust.firstName = txtFirstName.value;
-	cust.lastName : txtLastName.value;
-	cust.phoneNumber : txtPhoneNumber.value;
+	cust.lastName = txtLastName.value;
+	cust.phoneNumber = txtPhoneNumber.value;
 
 
 	customers.push(cust);
