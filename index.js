@@ -19,11 +19,20 @@ txtPhoneNumber.value = "+44 0206 555-1212";
 var btnSubmit = document.getElementById("btnSubmit");
 btnSubmit.onclick = function(evt) {
 	console.log("You clicked the button!!!");
+	/*
 	var cust = {
 		firstName : txtFirstName.value,
 		lastName : txtLastName.value,
 		phoneNumber : txtPhoneNumber.value
 	};
+	*/
+
+	var cust = new Customer(); // Our business domain model
+	cust.firstName = txtFirstName.value;
+	cust.lastName : txtLastName.value;
+	cust.phoneNumber : txtPhoneNumber.value;
+
+
 	customers.push(cust);
 	txtFirstName.value = "";
 	txtLastName.value = "";
