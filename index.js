@@ -6,6 +6,12 @@ var customers = [ ];
 // that gets invoked after the page loads
 window.onload = function() {
 
+$.get("http://www.nextgeneducation.com/weasley/customers.json", function(data) {
+	customers = data;
+	clearTable();
+	populateTable();
+});
+
 var txtFirstName = document.getElementById("firstName");
 var txtLastName = document.getElementById("lastName");
 var txtPhoneNumber = document.getElementById("phoneNumber");
@@ -40,7 +46,6 @@ btnSubmit.onclick = function(evt) {
 	//console.log(customers);
 
 	clearTable();	
-
 	populateTable();
 };
 
