@@ -39,6 +39,12 @@ btnSubmit.onclick = function(evt) {
 	txtPhoneNumber.value = ""; // reset pn field
 	//console.log(customers);
 
+	clearTable();	
+
+	populateTable();
+};
+
+function clearTable() {
 	// Clear out the table except for the header row
 	while (tblCustomers.rows.length > 1) {
 		tblCustomers.deleteRow(1); // Delete the top data row
@@ -49,8 +55,10 @@ btnSubmit.onclick = function(evt) {
 
 	//for (var rowNum = 1; rowNum < tblCustomers.rows.length; rowNum++) {
 	//	tblCustomers.deleteRow(rowNum);
-	//}	
+	//}
+}
 
+function populateTable() {
 	for (var i = 0; i < customers.length; i++) {
 		//console.log(customers[i]);
 		tblCustomers.innerHTML += 
@@ -61,7 +69,14 @@ btnSubmit.onclick = function(evt) {
 		 	+ "</tr>"
 		;
 	}
-};
+}
+
+
+
+
+
+
+
 
 
 };

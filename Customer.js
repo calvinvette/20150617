@@ -4,13 +4,13 @@ var Customer = function() {
 	this.lastName = "";
 	this.phoneNumber = "";
 	this.customerId = -1;
-
 	this.toString = function() {
-		return 
-			"Customer#" + this.customerId + ": " +
+		return "Customer#" + 
+			this.customerId + ": " +
 			this.firstName + " " +
 			this.lastName + "; Ph:" + 
-			this.phoneNumber
-	}
-
+			this.phoneNumber;
+	}; 
 };
+
+
